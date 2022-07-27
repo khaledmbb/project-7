@@ -1,0 +1,985 @@
+/* Start Mean Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+/* End Mean Fonts */
+
+html{
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Yeseva One', cursive;
+  font-size: 21px;
+  text-transform: capitalize;
+  position: relative;
+}
+:root{
+  --mean-color-font: #c18f59;
+  --second-color-font: #626262;
+  --third-color-font: #222;
+  --fade-transition : 0.4s;
+  --fade-transition-long : 0.7s;
+  --fade-transition-longer : 1s;
+}
+
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+h1,h2,h3,h4,h5 {
+  color: var(--third-color-font);
+}
+h1{
+  font-size: 50px;
+}
+button {
+  font-family: 'Yeseva One', cursive;
+}
+h1::selection {
+  background-color: #c18f5971;
+}
+h2::selection {
+  background-color: #c18f5971;
+}
+h3::selection {
+  background-color: #c18f5971;
+}
+h4::selection {
+  background-color: #c18f5971;
+}
+button {
+  user-select: none;
+}
+p::selection {
+  background-color: #c18f5971;
+}
+
+/* Start Fixed */
+
+.fixed {
+  position: fixed;
+  display: none;
+  right: 40px;
+  bottom: 30px;
+  background-color: var(--mean-color-font);
+  padding: 16px;
+  z-index: 99;
+  cursor: pointer;
+}
+.fixed.show {
+  display: block;
+  animation: lightSpeedInRight;
+  animation-duration: var(--fade-transition-long);
+}
+.fixed i {
+  font-size: 23px;
+  animation: shakeY;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+/* End Fixed */
+
+/* Start Header */
+
+header{
+  background-image: url(https://demos.freehtml5.co/author/images/top-banner-bckg.jpg);
+  position: relative;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+header .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000000ea;  
+  z-index: -2;
+  backdrop-filter: blur(3px);
+}
+.container {
+  padding: 140px 170px 0 170px;
+}
+header .container{
+  z-index: 1; 
+  padding: 50px 170px 0;
+}
+@media (max-width:1340px) {
+  header .container{
+    z-index: 1; 
+    padding: 50px 130px 0;
+  }
+}
+header .head-one{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-bottom: 90px;
+  align-items: center;
+}
+header .head-one .nav-bar .fa-bars {
+  color: var(--mean-color-font);
+  font-size: 30px;
+  cursor: pointer;
+  transition: var(--fade-transition);
+}
+header .head-one .nav-bar .fa-bars:hover{
+  color: white;
+}
+
+/* Start NavBar On click */
+
+header .head-one .nav-bar .top-overlay {
+  position: absolute;
+  background-color: #000000c4;
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  justify-content: center;
+  align-items: center;
+  transition: var(--fade-transition-long);
+  z-index: 3;
+}
+header .head-one .nav-bar .top-overlay .fa-times{
+  cursor: pointer;
+  font-size: 34px;
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  color: var(--mean-color-font);
+  transition: var(--fade-transition);
+}
+header .head-one .nav-bar .top-overlay i:hover{
+  color: white;
+}
+header .head-one .nav-bar .top-overlay ul{
+  display: flex;
+  flex-flow: column wrap;
+  background: var(--mean-color-font);
+  padding: 50px;
+  gap: 0;
+  width: 66%;
+  text-align: center;
+}
+header .head-one .nav-bar .top-overlay ul li{
+  padding: 20px;
+  font-size: 24px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+header .head-one .nav-bar .top-overlay ul li:hover{
+  background-color: black;
+}
+
+/* End NavBar On click */
+
+header .head-two {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+@media (max-width:1400px) {
+  header .head-two .image img{
+    width: 470px;
+  }
+}
+@media (max-width:1380px) {
+  header .head-two .image img{
+    width: 490px;
+  }
+}
+@media (max-width:1280px) {
+  header .head-two .image img{
+    width: 400px;
+    height: 520px;
+  }
+}
+@media (max-width:1100px) {
+  header .head-two .image img{
+    width: 340px;
+    height: 520px;
+  }
+  header .head-two .info .h1{
+    font-size: 40px; 
+  }
+  header .head-two .info .h2{
+    font-size: 40px; 
+  }
+}
+@media (max-width:1000px) {
+  header .head-two .image img{
+    width: 340px;
+    height: 520px;
+  }
+  header .head-two .info .h1{
+    font-size: 30px; 
+  }
+  header .head-two .info .h2{
+    font-size: 30px; 
+  }
+}
+@media (max-width:900px) {
+  header .head-two {
+    flex-flow: column-reverse wrap;
+  }
+  header .head-two .image img{
+    width: 100%;
+  }
+  header .head-two .info .h1{
+    font-size: 40px; 
+  }
+  header .head-two .info .h2{
+    font-size: 40px; 
+  }
+}
+@media (max-width:700px) {
+  header .head-two {
+    flex-flow: column-reverse wrap;
+  }
+  header .head-two .image img{
+    display: none;
+  }
+  header .head-two .info .h1{
+    font-size: 40px; 
+  }
+  header .head-two .info .h2{
+    font-size: 40px; 
+  }
+}
+
+header .head-two .image{
+  flex-basis: 50%;
+}
+header .head-two .image img{
+  min-width: 100%;
+  z-index: 4;
+  animation: zoomInUp ease-out; 
+  animation-duration: 1.1s;
+}
+header .head-two .info .p1{
+  color: var(--mean-color-font);
+  padding: 30px 0;
+}
+header .head-two .info .p2{
+  color: var(--mean-color-font);
+  padding: 20px 0;
+  text-align: center;
+}
+header .head-two .info .h1{
+  color: white;
+  font-size: 70px;
+  position: relative;
+  right: -620px;
+  transition: var(--fade-transition-long);
+  z-index: -1;
+  transition-delay: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .head-two .info{
+  flex-basis: 50%;
+}
+header .head-two .info .h2{
+  display: block;
+  padding: 10px 140px;
+  position: relative;
+  transition-timing-function: ease-in-out;
+  right: -560px;
+  transition-delay: 1s;
+  font-size: 70px;
+  transition: var(--fade-transition-long);
+  color: white;
+}
+header .head-two .info h3{
+  color: var(--second-color-font);
+  font-weight: 100;
+  line-height: 1.3;
+  padding-bottom: 40px;
+}
+header .head-two .info button{
+  background-color: transparent;
+  color: var(--mean-color-font);
+  padding: 10px 20px;
+  border: 1px solid var(--mean-color-font);
+  text-transform: capitalize;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--fade-transition);
+}
+header .head-two .info button i{
+  color: var(--mean-color-font);
+  padding-left: 10px;
+  font-size: 20px;
+}
+header .head-two .info button:hover{
+  color: white;
+}
+header .head-two .info button:hover i{
+  animation: arrowBio var(--fade-transition-long) infinite alternate;
+  color: white; 
+}
+@keyframes arrowBio {
+  0%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+/* End Header */
+
+
+/* Start About */
+
+.about {
+  position: relative;
+}
+.about .container {
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: end;
+}
+.about .son {
+  border: 6px solid white;
+  position: absolute;
+  z-index: 6;
+  text-align: center;
+  width: 400px;
+  background-color: white;
+  left: -460px;
+  top: 210px;
+  transition: var(--fade-transition-long);
+}
+.about .son h1{
+  color: var(--third-color-font);
+  padding: 30px;
+}
+.about .son h1 span{
+  color: var(--mean-color-font);
+  font-size: 68px;
+}
+.about .son p{
+  color: var(--second-color-font);
+  font-size: 20px;
+  padding-bottom: 80px;
+}
+
+.about .boy {
+  background-image: url(https://demos.freehtml5.co/author/images/about-me-bckg.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 90px 220px;
+  background-color: rgba(0, 0, 0, 0.553);
+  background-blend-mode: soft-light;
+  width: 670px;
+}
+.about .boy h1{
+  padding-bottom: 60px;
+  color: white;
+  position: relative;
+}
+.about .boy h1::before{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35px;
+}
+.about .boy h1::after{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 46%;
+  transform: translateX(-46%);
+  bottom: 41px;
+}
+.about .boy p{
+  color: var(--mean-color-font);
+  margin-top: -15px;
+}
+.about .boy p span{
+  color: white;
+  font-size: 50px;
+}
+.about .boy h3{
+  padding: 50px 0 0;
+  font-weight: bold;
+  color: white;
+}
+.about .boy button{
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid var(--mean-color-font);
+  margin-top: 20px; 
+  color: var(--mean-color-font); 
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--fade-transition);
+}
+.about .boy button:hover{
+  color: white;
+}
+
+/* End About */
+
+
+
+/* Start Books Section */
+
+.books {
+  text-align: center;
+}
+.books .container {
+  display: flex;
+  flex-flow: row nowrap; 
+  gap: 50px;
+}
+.books h1 {
+  padding-top: 130px; 
+  position: relative;
+}
+.books h1::before{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 51%;
+  transform: translateX(-51%);
+  bottom: -30px;
+}
+.books h1::after{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 49%;
+  transform: translateX(-50%);
+  bottom: -24px;
+}
+.books .book {
+  flex:1;
+  margin-top: -30px;
+}
+.books .book .image{
+  cursor: pointer;
+  position: relative;
+}
+.books .book .image .overlay-img{
+  width: 100%;
+  height: 100%;
+  background-color: #000000a4;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.books .book .image i{
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+.books .book .image img{
+  min-width: 100%;
+  z-index: 2;
+}
+.books .book h4{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.books .book p{
+  color: var(--mean-color-font);
+  font-size: 20px;
+  font-style: italic;
+}
+.books .book .rate{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.books .book .fate{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.books .book .tate{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.books .book .cace{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.books .book  i{
+  font-size: 18px;
+  color: #ffd0008d; 
+  cursor: pointer;
+  transition: var(--fade-transition);
+  padding: 0 2px;
+}
+.books .book  i:hover ~ i{
+  color: #ffd200; 
+}
+.books .for-more {
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid var(--mean-color-font);
+  margin-top: 20px; 
+  color: var(--mean-color-font); 
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--fade-transition);
+  margin-top: 50px; 
+}
+.books .for-more:hover{
+  color: black;
+}
+/* End Books Section */
+
+
+/* Start Books Popup Image */
+
+.popup {
+  width: calc(100% - 600px);
+  height: calc(100% - 200px);
+  position: fixed;
+  background-color: #000000b7;
+  z-index: 99;
+  animation: backInLeft; 
+  animation-duration: var(--fade-transition-long);
+  left: 18%;
+  top: 10%;
+  backdrop-filter: blur(4px);
+}
+.popup .img-box{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+}
+.popup .img-box .popup-img {
+  width: 300px;
+  height: 300px;
+  z-index: 100;
+}
+.popup .img-box .alt-box {
+  padding: 20px 40px;
+  color: white; 
+  background-color: var(--mean-color-font);
+  margin-bottom: 30px;
+  border-radius: 1px;
+}
+.popup .icon-remove {
+  color: red;
+  font-size: 40px;
+  position: absolute; 
+  right: 70px;
+  top: 60px;
+  color: var(--mean-color-font);
+  user-select: none;
+}
+
+/* End Popup Image */
+
+
+/* Start Information section */
+
+.information {
+  background-image : url(https://demos.freehtml5.co/author/images/book-bckg.jpg
+  );
+  background-size: cover;
+  margin: 120px 0;
+  position: relative; 
+  z-index: 0;
+  background-position: 30% 50%;
+}
+.information::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--mean-color-font);
+  opacity: 0.9;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.information .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 120px 250px;
+  z-index: 3;
+} 
+.information h1 {
+  color: white;
+  z-index: 5;
+}
+.information .box .in {
+  display: flex;
+  padding-top: 25px;
+  gap: 20px;
+  font-size: 22px;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.information .box .in i{
+  font-size: 26px;
+}
+/* End Information section */
+
+
+
+/* Start Blog Section */
+
+.blog h1 {
+  position: relative;
+  text-align: center;
+}
+.blog h1::before{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 51%;
+  transform: translateX(-51%);
+  bottom: -30px;
+}
+.blog h1::after{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 49%;
+  transform: translateX(-50%);
+  bottom: -24px;
+}
+.blog .container {
+  transition: var(--fade-transition);
+  display: none;
+  gap: 30px;
+  margin-top: -30px; 
+}
+.blog .box {
+  display: flex;
+  align-items: center;
+  border: 4px solid #f5f5f5;
+}
+
+.blog .box .image {
+  padding: 10px;
+  padding-right: 0;
+}
+.blog .box .image img{
+  min-width: 100%;
+}
+.blog .box .info {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.blog .box .info h2 {
+  font-size: 26px;
+}
+.blog .box .info .p1 {
+  padding: 10px 0;
+  color: var(--mean-color-font);
+}
+.blog .box .info .p2 {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--second-color-font);
+}
+/* End Blog Section */
+
+/* Start testimonial */
+
+.testimonial {
+  background-image: url(https://demos.freehtml5.co/author/images/quotes-bckg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  color: white;
+  margin-top: 140px;
+}
+.testimonial::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  background-color: #000000df;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+.testimonial .container {
+  padding-bottom: 140px;
+}
+.testimonial h1 {
+  color: white;
+  position: relative;
+}
+.testimonial h1::before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 51%;
+  transform: translateX(-51%);
+  bottom: -30px;
+}
+.testimonial h1::after {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: var(--mean-color-font);
+  left: 49%;
+  transform: translateX(-50%);
+  bottom: -24px;
+}
+.testimonial p {
+  padding: 80px 280px 50px;
+  line-height: 1.4;
+}
+.testimonial h2{
+  color: var(--mean-color-font); 
+  padding-top: 10px;
+}
+/* End testimonial */
+
+
+/* Start social media */
+
+.social {
+  background-image: url(https://demos.freehtml5.co/author/images/social-bckg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 0;
+}
+.social::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mean-color-font);
+  opacity: 0.9;
+  z-index: -1;
+}
+.social .container {
+  padding: 70px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+}
+.social i{
+  font-size: 30px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  transition: var(--fade-transition);
+  cursor: pointer;
+}
+.social i:hover {
+  background-color: var(--second-color-font);
+  transform: scale(1.1);
+  border: none;
+}
+
+/* End social media */
+
+
+/* Start Footer */
+
+footer {
+  background-color: #343434; 
+  padding-bottom: 130px;
+}
+footer .container {
+  display: flex;
+  gap: 40px;
+}
+footer .boy {
+  flex: 1;
+}
+footer .girl {
+  flex: 2;
+
+}
+footer .contact {
+  flex: 4;
+
+}
+footer .boy h4{
+  padding: 15px 0;
+  color: var(--mean-color-font);
+}
+footer .girl h2{
+  color: var(--mean-color-font);
+  padding-bottom: 20px;
+}
+footer .girl a{
+  color: white;
+  padding-bottom: 10px;
+  display: block;
+}
+footer .girl .social-end {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-top: 10px;
+}
+footer .girl .social-end i{
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  transition: var(--fade-transition);
+  cursor: pointer;
+}
+footer .girl .social-end i:hover {
+  background-color: var(--second-color-font);
+  transform: scale(1.1);
+  border: none;
+}
+footer .contact h2{
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
+}
+footer .contact form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+footer .contact form input {
+  color: var(--mean-color-font);
+  background-color: #282828;
+  border: 1px solid #404040;
+  padding: 20px;
+  width: 249px;
+  font-family: 'Yeseva One', cursive;
+  font-size: 20px;
+}
+footer .contact form input[type="submit"] {
+  color: white;
+  background-color: var(--mean-color-font);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: var(--fade-transition);
+}
+footer .contact form input[type="submit"]:hover {
+  animation: pulse;
+  animation-duration: 1s;
+}
+footer .contact form input:focus {
+  outline: 1px solid var(--mean-color-font);
+}
+footer .contact form textarea {
+  color: var(--mean-color-font);
+  background-color: #282828;
+  border: 1px solid #404040;
+  padding: 20px;
+  width: 100%;
+  font-family: 'Yeseva One', cursive;
+  font-size: 20px;
+}
+footer .contact form textarea:focus {
+  outline: 1px solid var(--mean-color-font);
+}
+footer{
+  position: relative;
+}
+
+/* If email or userName false */
+
+.input-wrong {
+  background-color: var(--mean-color-font);
+  padding: 60px 30px 30px;
+  position: absolute;
+  bottom: 210px;
+  left: 120px; 
+}
+.input-wrong .times {
+  position: absolute;
+  right: 30px;
+  top: 16px;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px; 
+  cursor: pointer;
+}
+
+.end {
+  background-color: #2d2d2d;
+  text-align: center;
+}
+.end .container {
+  padding: 50px 0;
+}
+.end h3 {
+  color: #777;
+  font-size: 23px;
+}
+.end h3 i {
+  color: var(--mean-color-font);
+}
+.end h3 span {
+  transition: var(--fade-transition);
+  color: var(--mean-color-font);
+}
+/* End Footer */
+
+
+
